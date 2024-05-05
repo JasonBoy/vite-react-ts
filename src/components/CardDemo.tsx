@@ -1,4 +1,4 @@
-import { Button } from 'antd';
+import { Button, message } from 'antd';
 import styles from './CardDemo.module.css';
 import { apiClient } from '@/lib/http/api-client.ts';
 
@@ -8,6 +8,7 @@ export default function CardDemo() {
       await apiClient.get('/user');
     } catch (err) {
       console.error(err);
+      message.error(JSON.stringify(err));
     }
   }
 
