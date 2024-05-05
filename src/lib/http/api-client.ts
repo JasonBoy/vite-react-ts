@@ -1,7 +1,7 @@
 import { HttpClient } from '@/lib/http/HttpClient.ts';
 
 export const apiClient = new HttpClient({
-  apiPrefix: 'http://localhost:1337/api',
+  apiPrefix: `${import.meta.env.VITE_API_PREFIX}/api`,
 });
 
 export async function getUserInfo() {

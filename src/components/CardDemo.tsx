@@ -1,4 +1,4 @@
-import { Button, message } from 'antd';
+import { Button, DatePicker, message } from 'antd';
 import styles from './CardDemo.module.css';
 import { apiClient } from '@/lib/http/api-client.ts';
 
@@ -18,6 +18,7 @@ export default function CardDemo() {
     >
       <Button onClick={onClick}>Send api</Button>
       <p className={styles.cardDesc}>module css is cool</p>
+      <DatePicker />
     </div>
   );
 }
